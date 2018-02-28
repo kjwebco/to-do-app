@@ -130,8 +130,7 @@ table {
 *, h1, h2, h3, h4, h5, h6, p, span, div {
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: white; }
+          box-sizing: border-box; }
 
 html, body {
   background: #EDEDED;
@@ -174,7 +173,32 @@ html, body {
     text-align: right; }
     #all-tasks .header .logo {
       font-family: 'Megrim', cursive;
-      float: left; }
+      font-size: 38px;
+      float: left;
+      color: white; }
+    #all-tasks .header .class-total {
+      position: relative;
+      top: -20px; }
+      #all-tasks .header .class-total .task {
+        display: inline-block;
+        color: white; }
+        #all-tasks .header .class-total .task .number {
+          color: #9787EE;
+          font-weight: 100;
+          font-size: 60px;
+          margin: 0 10px 0 0;
+          position: relative;
+          top: 15px; }
+  #all-tasks .add-circle {
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 10px 12px; }
+    #all-tasks .add-circle .fa-plus-circle {
+      color: #25B3EC;
+      font-size: 50px; }
 
 .btn {
   text-decoration: none;
