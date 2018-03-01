@@ -86,9 +86,9 @@ html, body{
         border-radius: 50%;
 
         position: absolute;
-        top: 25px;
+        top: 125px;
         right: 25px;
-        padding: 10px 12px;
+        padding: 10px 11.5px;
 
         .fa-plus-circle{
             color: $lightBlue;
@@ -97,6 +97,14 @@ html, body{
     }
 }
 
+.container{
+    max-width: 1200px;
+
+    
+}
+.content-area{
+    color: red;
+}
 .btn{
     text-decoration: none;
     width: 100%;

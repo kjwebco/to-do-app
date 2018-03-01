@@ -193,12 +193,18 @@ html, body {
     background: black;
     border-radius: 50%;
     position: absolute;
-    top: 25px;
+    top: 125px;
     right: 25px;
-    padding: 10px 12px; }
+    padding: 10px 11.5px; }
     #all-tasks .add-circle .fa-plus-circle {
       color: #25B3EC;
       font-size: 50px; }
+
+.container {
+  max-width: 1200px; }
+
+.content-area {
+  color: red; }
 
 .btn {
   text-decoration: none;
