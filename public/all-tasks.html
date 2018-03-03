@@ -12,31 +12,168 @@
   </head>
   <body>
     <div id="all-tasks">
-      
       <section class="header">
-          <div class="top">
-            <div class="logo">
-              Task Manager
+        <div class="top">
+          <div class="logo">
+            TaskManager
+          </div>
+          <div class="tasks-total">
+            <div class="task"><span class="number">12</span> Tasks</div>
+            <div class="task"><span class="number">5</span> completed</div>
+          </div>
+
+          <div class="add-circle">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-area">
+        <div class="container">
+          <div class="tasks-container">
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+              <div class="check-box">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
             </div>
-            <div class="class-total">
-            <div class="task"><span class="number">12</span>Tasks</div>
-        
-            <div class="task"><span class="number">5</span>Completed</div>
+
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
             </div>
-            <div class="add-circle">
-            <i class="fa fa-plus-circle"></i>
+
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
             </div>
-         </div>
-     </section> 
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+            <div class="task-box">
+              <div class="title">
+                Clean Room
+              </div>
+              <div class="date">
+                Created: December 3, 2017
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-     <section class="content-area">
+      <section class="task-form">
+        <div class="close-btn">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <form>
+            <h3> Add a task</h3>
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title">
+          </div>
+          <div class="form-group">
+            <label for="title">Category:</label>
+            <input type="text" name="title">
+          </div>
+          <div class="form-group">
+            <label for="title">Notes:</label>
+            <textarea name="notes"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Add New Task</button>
+          </div>
 
-      <div class="container">
-
-      </div>
-     </section>
-
-
+        </form>
+      </section>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('.add-circle').on('click', function(){
+          $('.task-form').addClass('active')
+        })
+        $('.task-form .close-btn').on('click', function(){
+          $('.task-form').removeClass('active')
+        })
+      })
+    </script>
   </body>
 </html>
