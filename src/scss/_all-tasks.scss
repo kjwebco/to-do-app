@@ -1,0 +1,265 @@
+#all-tasks {
+  height: 100%;
+  overflow: auto;
+
+  .header {
+    background: url('https://static.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg') center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    // height: 300px;
+    background-size: cover;
+    color: white;
+
+    .top {
+      background: rgba(58,71,147,.6);
+      padding: 50px 15px;
+      text-align: right;
+      position: relative;
+
+      .logo {
+        font-family: 'Megrim', cursive;
+        font-size: 36px;
+        float: left;
+      }
+
+      .tasks-total {
+        position: relative;
+        top: -20px;
+
+        .task {
+          display: inline-block;
+
+          .number {
+            color: $lightPurple;
+            font-weight: 100;
+            font-size: 60px;
+            margin: 0 10px 0 0;
+            position: relative;
+            top: 15px;
+          }
+        }
+      }
+    }
+
+    .add-circle {
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 125px;
+      right: 25px;
+      padding: 10px 14px;
+
+      .fa {
+        color: $lightBlue;
+        font-size: 50px;
+      }
+    }
+  }
+
+  .content-area {
+    color: red;
+    width: 100%;
+    overflow: auto;
+
+    .tasks-container {
+      margin: 40px 0;
+
+      .task-box {
+        padding: 20px;
+        border-bottom: 2px solid #D1D1D1;
+        margin: 0 0 20px;
+        background: white;
+        position: relative;
+
+        .title {
+          color: black;
+          margin: 0 0 15px;
+          font-size: 24px;
+        }
+
+        .date {
+          color: #ABABAB;
+          font-size: 14px;
+        }
+
+        .check-box {
+          padding: 2px;
+          border-radius: 10px;
+          border: 3px solid $darkBlue;
+          display: inline-block;
+          position: absolute;
+          top: 25px;
+          right: 25px;
+          font-size: 32px;
+          color: $darkBlue;
+        }
+      }
+    }
+  }
+
+  .task-form {
+    background: $darkBlue;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: $white;
+    padding: 50px 0;
+    transform: translate(0, 100%);
+    transition: all 0.6s ease-in-out;
+
+    &.active {
+      transform: translate(0, 0);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 35px;
+      right: 35px;
+      padding: 15px;
+      cursor: pointer;
+
+      .fa {
+        font-size: 36px;
+      }
+    }
+
+    form {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    h3 {
+      margin: 50px 0;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-family: 'Roboto', cursive;
+      font-weight: 300;
+      font-size: 24px;
+      display: block;
+      text-transform: capitalize;
+      margin: 0 0 15px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      background: rgba(255,255,255, .1);
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255, .7);
+      font-family: 'Roboto', cursive;
+      font-weight: 300;
+      font-size: 36px;
+      color: white;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 250px;
+    }
+
+    button {
+      background: $lightBlue;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: $white;
+      padding: 15px 20px;
+    }
+  }
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+// Laptops
+@media screen and (min-width: 1200px) and (max-width: 1300px) {}
+// Tablets
+@media screen and (max-width: 1199px) {}
+// PHONES
+@media screen and (max-width: 767px) {
+  #all-tasks {
+    .header {
+      .add-circle {
+          background: black;
+          border-radius: 50%;
+          position: absolute;
+          top: 112px;
+          right: 25px;
+          padding: 10px 14px;
+      }
+      .top {
+        .tasks-total {
+          top: 0;
+          .task {
+            display: block;
+            .number {
+              color: #9787EE;
+              font-weight: 500;
+              font-size: 24px;
+              margin: 0 10px 0 0;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Xtra Small PHONES
+@media screen and (max-width: 353px) {
+  #all-tasks {
+    .header {
+      .add-circle {
+          background: black;
+          border-radius: 50%;
+          position: absolute;
+          top: 128px;
+          right: 25px;
+          padding: 10px 14px;
+      }
+      .top {
+        .logo{
+          float: none;
+          text-align: center;
+          margin: 0 0 15px 0;
+        }
+        .tasks-total {
+          text-align: center;
+          top: 0;
+          .task {
+            display: inline-block;
+            .number {
+              color: #9787EE;
+              font-weight: 500;
+              font-size: 24px;
+              margin: 0 10px 0 0;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
